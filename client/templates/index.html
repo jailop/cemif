@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>{%title%}</title>
+        <!--
+        <link rel="stylesheet" href="{%root%}/node_modules/milligram/dist/milligram.css"/>
+        <link rel="stylesheet" href="{%root%}/css/normalize.css"/>
+        <link rel="stylesheet" href="{%root%}/css/skeleton.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=2, maximum-scale=1, user-scalable=no">
+        -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/css/style.css"/>
+        {%head%}
+    </head>
+<body>
+      <nav class="navbar">
+          <div class="six columns ">CEMIF</div>
+          <div class="six columns text-right">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="">Actualidad</a></li>
+                <li><a href="">Temas</a></li>
+                <li><a href="/learning/">Aprender</a></li>
+                <li><input placeholder="Buscar"></li>
+            </ul>
+          </div>
+      </nav>
+      <div class="container">
+         {%body%}
+         <div><small>Actualizado: {%date%}</small></div>
+      </div>
+     <div class="footer">
+         <div class="four columns">
+             <img src="/imgs/logo_cutted.png" width="100%">
+         </div>
+         <div class="four columns">
+            <p>
+              El Centro de Monitoreo e Incidencia Fiscal es una iniciativa de
+              la Fundación Nacional para el Desarrollo, capítulo nacional de
+              Transparencia Internacional.
+            </p>
+            <p>Contacto:<br/>
+               Calle Arturo Ambrogi No. 411, San Salvador<br/>
+               Tel. +503 2209-4300</p>
+         </div>
+         <div class="four columns">
+             <ul>
+                 <li>Acerca de</li>
+                 <li>Equipo</li>
+                 <li>Política de privacidad</li>
+                 <li>Licencia y derechos de autor</li>
+             </ul>
+        </div>
+     </div>
+</body>
+</html>

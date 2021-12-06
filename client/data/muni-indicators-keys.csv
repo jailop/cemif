@@ -1,0 +1,20 @@
+key,label,category
+INGPRP,A. Ingresos propios,revenue
+ICTESP,B. Ingresos por contribuciones especiales,revenue
+TRFREC,C. Transferencias recibidas,revenue
+INGDEU,D. Endeudamiento,revenue
+GASTOS,A. Gastos,expenses
+INVERS,B. Inversiones,expenses
+AMTDEU,C. Amortización de deudas,expenses
+EGROTR,D. Otros egresos,expenses
+FDINVF,A. Fondos e inversiones financieras,assets
+EXISBU,B. Existencias y bienes de uso,assets
+INVPRY,C. Inversiones en proyectos,assets
+RECOTR,D. Otros recursos,assets
+OBLGCP,A. Obligaciones de corto plazo,obligations
+OBLGLP,B. Obligciones de largo plazo,obligations
+GTOING,Razón entre gastos e ingresos propios,ratio
+INVGTO,Razón entre inversión y gastos,ratio
+DEUING,Razón entre deuda e ingresos propios,ratio
+DEPTRF,Dependencia de las transferencias,ratio
+DEPDEU,Dependencia del endeudamiento,ratio
