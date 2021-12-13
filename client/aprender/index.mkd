@@ -1,0 +1,74 @@
+%title Aprender
+%date Dec. 01, 2021
+
+%html
+
+<div class="row">
+<div class="column">
+<img src="{%root%}/pictures/learning.jpg" width="100%">
+</div>
+</div>
+
+%mkd
+
+# Aprender
+
+Esta sección contiene tutoriales para aprender sobre la política fiscal y los
+presupuestos públicos en El Salvador.
+
+Una de las formas de entender las finanzas públicas es analizando el origen y
+destinado de los fondos. Así, sus principales componentes son:
+
+- Ingresos: Son los recursos que el gobierno recauda por medio de impuestos,
+    ventas de servicios y otras fuentes.
+- Gastos: Son los fondos destinados a mantener operando las oficinas públicas
+y los servicios que estas prestan. Incluyen por ejemplo los salarios de los
+servidores públicos, el pago a los proveedores de bienes y servicios y otras
+erogaciones.
+- Inversión: Son fondos destinados a producir bienes públicos de largo duración
+y que generan un retorno económico, ya sea para el mismo gobierno o para la
+población.
+- Deuda: Cuando los gastos y la inversión no pueden ser cubiertos con los
+ingresos del gobierno, entonces este hace préstamos.
+
+Otra forma de comprender las finanzas públicas es por medio de los presupuestos.
+Los presupuestos representan las estimaciones de lo que gobierno esperar
+recibir, gastar e invertir en un año.
+
+Los presupuestos representan las decisiones que las autoridades toman en
+relación a qué prioridades serán atendidas y cómo serán financiadas. Por su
+carácter dinámico, los presupuestos se analizan en diferentes momentos:
+
+- Formulación: Esto ocurre meses antes de que un presupuesto cobre vigencia. Se
+deteriman las necesidades y se decide cuáles tendrán mayor prioridad. Se estima
+cuánto dinero se recibirá de ingresos y préstamos y ese monto se distribuye
+entre diferentes programas y actividades.
+
+- Aprobación: Se revisa la propuesta de presupuesto y se hacen ajustes. El
+presupuesto nacional lo aprueba la Asamblea Legislativa, mientras que los
+presupuestos de los gobiernos locales son aprobados por los concejos
+municipales. Cuando un presupuesto es aprobado, se convierte en ley.
+
+- Ejecución: En El Salvador los presupuestos públicos se hacen para cada año. El
+primero de enero inicia su ejecución, es decir que las diferentes oficinas
+comienzan a hacer gastos respaldadas en las asignaciones presupuestarias que les
+han sido aprobadas. La ejecución concluye el 31 de diciembre.
+
+- Modificaciones: Durante la ejecución surgen necesidades que no fueron
+previstas y eso obliga a que se modifiquen los presupuestos. Cuando los cambios
+son mayores, las modificaciones deben ser aprobadas por la Asamblea Legislativa
+o los concejos municipales, con las mismas formalidades que los presupuestos
+originales.
+
+- Liquidación: El 31 de diciembre se cierran todas las cuentas presupuestarias y
+se procede a hacer una liquidación. Esto implica entre otras cosas, informar qué
+sumas fueron las que finalmente se recibieron como ingresos y las que fueron
+gastas o invertidas.
+
+- Auditoría: La Corte de Cuentas y las unidades de auditoría interna revisan
+aspectos como la legalidad y eficacia en la ejecución del presupuesto, a la vez
+que verifican que los fondos se hayan usado correctamente.
+
+Si estas interesado en conocer más, visita regularmente este sitio para
+enterarate de las novedades o has contacto con el equipo del CEMIF para
+trasladar tus inquietudes. 

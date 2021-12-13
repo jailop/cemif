@@ -1,0 +1,18 @@
+%title Temas
+%date Dic. 11, 2021
+
+%html
+
+<div class="row">
+<div class="twelve columns">
+<img src="/pictures/desk.jpg" width="100%">
+</div>
+</div>
+%mkd
+
+# Temas
+
+En esta sección encontrarás recursos para analizas con mayor profundidad
+diferentes temas relacionados con las finanzas públicas.
+
+- [Finanzas municipales](../municipal/)

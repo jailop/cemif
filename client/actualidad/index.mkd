@@ -1,0 +1,16 @@
+%title Actualidad
+%data Dic. 11, 2021
+
+%html
+
+<div class="row">
+<div class="twelve columns">
+<img src="/pictures/topics.jpg" width="100%">
+</div>
+</div>
+
+%mkd
+
+# Actualidad
+
+Acá encontrarás información útil sobre temas actualidad...

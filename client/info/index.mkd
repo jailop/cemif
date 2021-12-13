@@ -1,0 +1,82 @@
+%title Acerca de
+%date Dic. 11, 2021
+
+%mkd
+
+# Acerca del CEMIF
+
+El CEMIF es un observatorio ciudadano que da seguimiento a los presupuestos
+públicos en El Salvador. Es parte de los esfuerzos de incidencia en las
+políticas públicas que impulsa la Fundación Nacional para el Desarrollo
+(FUNDE). FUNDE es el capítulo nacional de Transparencia Internacional.
+
+Los observatorios ciudadanos vigilan, evalúan o controlan ciertos aspectos de la
+vida pública que son susceptibles de ser intervenidos o solucionados por el
+gobierno o la sociedad civil (Silva Robles, 2013). La observación se realiza de
+manera organizada desde una perspectiva ciudadana, para que sirva de base en las
+discusiones y en la elaboración de propuestas.
+
+El CEMIF recopila datos de las finanzas públicas, realiza análisis del desempeño
+del ejercicio presupuestario y colabora con diferentes grupos sociales en
+actividades educativas acerca de la relación entre desarrollo y política fiscal.
+La iniciativa se apoya en una plataforma tecnológica para hacer consultas
+interactivas de datos desagregados de las finanzas públicas.
+
+En el marco de esta iniciativa, los datos desagregados consisten en el desglose
+con la mayor especificidad posible de los registros de la gestión del
+presupuesto y de las finanzas públicas. Estos datos pueden ser combinados en
+diversas formas, en contraste con la presentación estática de los estados
+financieros oficiales. Ello ayuda a que los ciudadanos exploren diferentes
+perspectivas sobre las decisiones relacionadas con la distribución, asignación y
+uso de los fondos públicos.
+
+El despliegue del CEMIF inició en el año 2019, en el marco del proyecto
+“Monitoreo ciudadano a la transparencia fiscal en El Salvador”, implementado por
+la FUNDE. El objetivo inicial fue promover el acceso, uso y análisis de la
+información financiera, en formatos asequibles y comprensibles para la población
+en general. La iniciativa se visualizó como una herramienta para reconstruir
+transacciones y encontrar patrones de posible corrupción o de uso ineficiente de
+los recursos públicos.
+
+El creciente uso de datos públicos como evidencia por parte de las
+organizaciones de sociedad civil y la evolución de los gobiernos en la apertura
+de la información son algunas de las tendencias en las que se inscribe el
+surgimiento del CEMIF.
+
+Por un lado, la puesta en marcha del CEMIF fue posible por el trabajo sostenido
+que la FUNDE ha mantenido por más de una década en el análisis de la política
+fiscal. Esto ha posicionado a la organización como una referente nacional en
+esta área del conocimiento. Sus aportes han contribuido a informar las
+discusiones públicas en materia de impuestos, gastos y deuda pública.
+
+Por otro lado, las garantías establecidas en la Ley de Acceso a la Información
+(aprobada en 2011) han hecho posible el acceso a registros detallados de la
+gestión financiera del Estado. Aún con numerosas controversias en la
+interpretación de lo que debe ser público y lo que debe ser secreto,
+instituciones como el Ministerio de Hacienda han expandido considerablemente
+los tipos de documentos y datos puestos a disposición de la ciudadanía.
+
+Cabe comentar que la vigencia de la Ley de Acceso a la Información no implica
+por sí misma que los ciudadanos puedan acceder libremente a documentos y datos
+oficiales. Lo importante es que dicha ley establece principios y mecanismos
+formales por medio de los cuales las controversias son dirimidas. Esto crea un
+entorno con ciertas garantías en el que los ciudadanos pueden objetar las
+decisiones tomadas por los funcionarios públicos. Al respecto, la FUNDE es una
+de las organizaciones de sociedad civil que ha impulsado numerosos litigios en
+materia de acceso a la información pública.
+
+En cuanto a la evolución del gobierno, también se debe reseñar la existencia y
+las mejoras implementadas en el Portal de Transparencia Fiscal en la última
+década. Este portal es operado por el Ministerio de Hacienda y concentra datos
+sobre ingresos, gastos y deuda pública (Ministerio de Hacienda, 2010). Una de
+las innovaciones fue la apertura de una sección de datos abiertos en el que son
+publicados detalles sobre la ejecución presupuestaria y la recaudación de
+impuestos, entre otros.
+
+**Referencias:**
+
+- Ministerio de Hacienda (2010, Jul. 21). Acuerdo No. 850: Normas para poner a
+disposición del ciudadano información sobre finanzas públicas.
+<https://www.transparenciafiscal.gob.sv/downloads/pdf/DC4204_Acuerdo_850.pdf>
+- Silva Robles, R. (2013). ¿Qué es un Observatorio Ciudadano? Vínculos, 2(4).
+<http://www.vinculossociologiaanalisisyopinion.cucsh.udg.mx/index.php/VSAO/article/view/4186>

@@ -1,0 +1,16 @@
+%title Licencia y derechos de autor
+%date Dic. 11, 2021
+
+%mkd
+
+# Licencia y derechos de autor
+
+La información contenida en este sitio es de acceso libre. Ha sido construida
+principalmente con base en información pública proporcionada por oficinas
+gubernamentales.
+
+La única condición que se pida para hacer uso de esta información es citar la
+fuente, para lo cual se le pide que utilice el siguiente esquema:
+
+Fundación Nacional para el Desarrollo (2021). _Centro de Monitoreo e Incidencia
+Fiscal_: [titulo de la página]. [enlace]

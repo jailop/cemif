@@ -1,0 +1,6 @@
+%title test
+%date anytime
+
+%head
+<script>var exports = {};</script>
+<script type="module" src="/res/components/example.js"></script>

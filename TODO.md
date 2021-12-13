@@ -1,0 +1,1 @@
+- Zoom para las gráficas
