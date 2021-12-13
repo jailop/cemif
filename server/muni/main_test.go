@@ -2,28 +2,42 @@ package muni
 
 import (
   "testing"
+  "reflect"
   "fmt"
 )
 
-func testListDeps(t *testing.T) {
-  deps := make(Departments, 14)
+func TestListDeps(t *testing.T) {
+  deps := Departments{}
   deps.List()
-  fmt.Println(deps)
   if deps[0].Department != "Ahuachapán" {
     t.Error("Bad department")
   }
+  if len(deps) == 0 {
+      t.Error("department list is empty")
+  }
 }
 
-func testListMuns(t *testing.T) {
-    muns:= make(Municipalities, 300)
-    muns.List("", 0)
-    fmt.Println(muns)
+func TestListMuns(t *testing.T) {
+    muns:= Municipalities{}
+    fmt.Println(reflect.TypeOf(muns))
+    muns.List("")
+    if len(muns) == 0 {
+        t.Error("Municipalities List was not updated, zero legnth")
+    }
 }
 
-func testGetMuni(t *testing.T) {
-    muni := Municipality{}
-    muni.Get("0101")
-    if muni.Municipality != "San Salvador" {
-        t.Error("Get municipality: error")
+func TestListObjs(t *testing.T) {
+    objs := MuniObjects{}
+    objs.List("8101", 2016)
+    if len(objs) == 0 {
+        t.Error("Objects list is empty")
+    }
+}
+
+func TestListAccounts(t *testing.T) {
+    accs := MuniAccounts{}
+    accs.List("8101", 2016)
+    if len(accs) == 0 {
+        t.Error("Account list is empty")
     }
 }

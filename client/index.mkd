@@ -1,37 +1,36 @@
 %title Centro de Monitoreo e Incicencia Fiscal
-%date Nov. 30, 2021
+%date Dic. 11, 2021
 
 %html
 
 <div class="row">
 <div class="twelve columns">
-<img src="{%root%}/pictures/elsalvador-map.jpg" width="100%">
+<img src="/pictures/elsalvador-map.jpg" width="100%">
 </div>
 </div>
-
-<div class="row">
-<div class="twelve columns">
 
 %mkd
+
+# Centro de Monitoreo e Incidencia Fiscal
 
 El Centro de Monitoreo e Incidencia Fiscal (CEMIF) es un observatorio
 ciudadano que da seguimiento a las finanzas y los presupuestos públicos en El
 Salvador.
 
-Para realizar el seguimiento, en el CEMIF se recopilan datos sobre los ingresos y los
-gastos de las oficinas públicas. Con estos datos se realizan análisis de la
-situación y las tendencias en el manejo de los recursos.
+Para realizar el seguimiento, en el CEMIF se recopilan datos sobre los ingresos
+y los gastos de las oficinas públicas. Con estos datos se realizan análisis de
+la situación y las tendencias en el manejo de los recursos.
+
+Para que las promesas que los candidatos y los funcionarios hacen puedan ser
+cumplidas, se necesitan recursos. Una decisión, referida a la construcción de
+una obra o la prestación de un servicio, no puede ser llevada a la práctica sin
+un presupuesto. Y el dinero para financiar esos presupuestos provienen de los
+impuestos que entre todos pagamos.
 
 Este sitio está hecho para promover la participación de los ciudadanos en las
 decisiones que los funcionarios públicos toman sobre la asignación y uso de los
 recursos públicos. Para tal fin, el CEMIF brinda orientación al ciudadano sobre
 cómo acceder, interpretar y usar los datos financieros.
 
-# ¿Cómo participar?
 
-Pongase en contacto con ...
 
-%html
-
-</div>
-</div>

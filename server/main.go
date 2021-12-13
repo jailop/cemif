@@ -18,12 +18,12 @@ func run() {
     {
         v2.GET("/departments", ListDepartments)
         v2.GET("/municipalities", ListMunicipalities)
-        v2.GET("/municipalities/:id", GetMunicipality)
         v2.GET("/municipalities/:id/objects", ListObjects)
         v2.GET("/municipalities/:id/accounts", ListAccounts)
     }
     router.Use(static.Serve("/", static.LocalFile("../client", false)))
-    router.StaticFile("/favicon.ico", "../client/favicon.ico")
+    router.Use(static.Serve("/res", static.LocalFile("../res", false)))
+    router.StaticFile("/favicon.ico", "../res/favicon.ico")
     router.Run()
 }
 

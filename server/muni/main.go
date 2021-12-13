@@ -2,6 +2,7 @@ package muni
 
 import (
   "fmt"
+  "log"
   "fiscal.funde.org/cemif/db"
 )
 
@@ -40,53 +41,51 @@ type MuniAccount struct {
 type MuniObjects []MuniObject
 type MuniAccounts []MuniAccount
 
-func (muni *Municipality) Get(id string) {
-    conn, _ := db.Open();
-    defer conn.Close();
-    sql := fmt.Sprintf("SELECT id, shp, contab, department, municipality, address, phone, email, url, km2 FROM municipalities WHERE id='%s'", id);
-    res, err := conn.Query(sql)
+func (muns *Municipalities) List(department string) {
+    conn, err := db.Open()
     if err != nil {
-        fmt.Println(err)
-        return;
+        log.Println("Error openning the database")
+        return
     }
-    defer res.Close()
-    if res.Next() {
-        err := res.Scan(&muni.Id, &muni.Shp, &muni.Contab, &muni.Department, &muni.Municipality, &muni.Address, &muni.Phone, &muni.Email, &muni.Url, &muni.Km2)
-        if err != nil {
-            fmt.Println(err)
-        }
-    }
-}
-
-func (muns Municipalities) List(department string, offset int) int {
-    limit := len(muns)
-    conn, _ := db.Open();
     defer conn.Close()
+    // Preparing SQL statement
     var depStmt string;
     if department != "" {
         depStmt = fmt.Sprintf(" WHERE department='%s' ", department)
     } else {
         depStmt = ""
     }
-    sql := fmt.Sprintf("SELECT id, shp, contab, department, municipality, address, phone, email, url, km2 FROM municipalities %s ORDER BY municipality LIMIT %d OFFSET %d", depStmt, limit, offset)
+    sql := fmt.Sprintf(`
+        SELECT id, shp, contab, department, municipality,
+               address, phone, email, url, km2
+        FROM municipalities %s
+        ORDER BY municipality`, depStmt)
+    // Querying the DB
     res, err := conn.Query(sql)
     if err != nil {
-        fmt.Println(err)
-        return 0
+        log.Println(err)
+        return
     }
     defer res.Close()
-    var i int
-    for i = 0; res.Next(); i++ {
-        err := res.Scan(&muns[i].Id, &muns[i].Shp, &muns[i].Contab, &muns[i].Department, &muns[i].Municipality, &muns[i].Address, &muns[i].Phone, &muns[i].Email, &muns[i].Url, &muns[i].Km2)
+    for ; res.Next(); {
+        aux := Municipality{}
+        err := res.Scan(&aux.Id, &aux.Shp, &aux.Contab, &aux.Department,
+            &aux.Municipality, &aux.Address, &aux.Phone, &aux.Email,
+            &aux.Url, &aux.Km2)
         if err != nil {
-            fmt.Println(err)
+            log.Println(err)
+            continue
         }
+        *muns = append(*muns, aux)
     }
-    return i
 }
 
-func (deps Departments) List() int {
-    conn, _ := db.Open();
+func (deps *Departments) List() {
+    conn, err := db.Open();
+    if err != nil {
+        log.Println("Error openning the database")
+        return
+    }
     defer conn.Close()
     stmt := `SELECT department, COUNT(municipality)
         FROM municipalities
@@ -94,46 +93,56 @@ func (deps Departments) List() int {
         ORDER BY department`
     res, err := conn.Query(stmt)
     if err != nil {
-        fmt.Println(err)
+        log.Println(err)
+        return
     }
     defer res.Close()
-    i := 0
-    for ; res.Next(); i++ {
-        err := res.Scan(&deps[i].Department, &deps[i].MuniNum)
+    for ; res.Next(); {
+        aux := Department{}
+        err := res.Scan(&aux.Department, &aux.MuniNum)
         if err != nil {
-            fmt.Println(err)
+            log.Println(err)
+            continue
         }
+        *deps = append(*deps, aux)
     }
-    return i
 }
 
-func (objs MuniObjects) List(municipality string, year int) int {
-    conn, _ := db.Open()
+func (objs *MuniObjects) List(municipality string, year int) {
+    conn, err := db.Open()
+    if err != nil {
+        log.Println("Error openning the database")
+        return
+    }
     defer conn.Close()
     stmtBase := `SELECT object, name
         FROM muniobjects
         WHERE year=%d AND municipality=%s`
+    // fmt.Println(stmt)
     stmt := fmt.Sprintf(stmtBase, year, municipality)
     res, err := conn.Query(stmt)
     if err != nil {
-        fmt.Println(err)
+        log.Println(err)
+        return
     }
     defer res.Close()
-    i := 0
-    for ; res.Next(); i++ {
-        if i == len(objs) {
-            break
-        }
-        err := res.Scan(&objs[i].Object, &objs[i].Name)
+    for ; res.Next(); {
+        aux := MuniObject{}
+        err := res.Scan(&aux.Object, &aux.Name)
         if err != nil {
-            fmt.Println(err)
+            log.Println(err)
+            continue
         }
+        *objs = append(*objs, aux)
     }
-    return i
 }
 
-func (accs MuniAccounts) List(municipality string, year int) int {
-    conn, _ := db.Open()
+func (accs *MuniAccounts) List(municipality string, year int) {
+    conn, err := db.Open()
+    if err != nil {
+        log.Println("Error openning the database")
+        return
+    }
     defer conn.Close()
     stmtBase := `SELECT account, name
         FROM muniaccounts
@@ -141,18 +150,17 @@ func (accs MuniAccounts) List(municipality string, year int) int {
     stmt := fmt.Sprintf(stmtBase, year, municipality)
     res, err := conn.Query(stmt)
     if err != nil {
-        fmt.Println(err)
+        log.Println(err)
+        return
     }
     defer res.Close()
-    i := 0
-    for ; res.Next(); i++ {
-        if i == len(accs) {
-            break
-        }
-        err := res.Scan(&accs[i].Account, &accs[i].Name)
+    for ; res.Next(); {
+        aux := MuniAccount{}
+        err := res.Scan(&aux.Account, &aux.Name)
         if err != nil {
-            fmt.Println(err)
+            log.Println(err)
+            continue
         }
+        *accs = append(*accs, aux)
     }
-    return i
 }
