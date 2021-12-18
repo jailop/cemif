@@ -1,0 +1,64 @@
+%title Finanzas municipales
+%date Dic. 15, 2021
+
+%head
+
+<script type="module" src="/res/components/singleindicator.js"></script>
+
+%mkd
+
+En esta sección se presentan las medias a nivel nacional de varios indicadores sobre las finanzas municipales para el año 2020:
+
+%html
+
+<div class="row">
+
+<div class="three columns">
+<x-single-indicator>
+    <span slot="title">Razón entre ingresos y gastos</span>
+    <span slot="value">5.4</span>
+    <span slot="previous">5.2</span>
+    <span slot="desc">
+        Lo que una alcaldía gasta por cada dólar que recibe como ingresos propios
+    </span>
+</x-single-indicator>
+</div>
+
+<div class="three columns">
+<x-single-indicator>
+    <span slot="title">Razón entre inversión y gasto</span>
+    <span slot="value">0.37</span>
+    <span slot="previous">0.29</span>
+    <span slot="desc">
+        Lo que una alcaldía invierte por cada dólar que gasta
+    </span>
+</x-single-indicator>
+</div>
+
+<div class="three columns">
+<x-single-indicator>
+    <span slot="title">Razón entre deuda e ingresos propios</span>
+    <span slot="value">53.28</span>
+    <span slot="previous">54.29</span>
+    <span slot="desc">
+        Lo que una alcaldía debe por cada dólar que recibe como ingresos propios
+    </span>
+</x-single-indicator>
+</div>
+
+</div>
+
+
+
+%mkd
+
+* Razón entre inversión y gasto: 0.37   
+Las alcaldías invertieron 37 centavos por cada dólar que gastaron
+* Razón entre deuda e ingresos: 53.28  
+Por cada dólar que recibieron como ingreso propio, las alcaldías debían 53.28 dólares.  
+Si las alcaldías destinaran todos sus ingresos propios al pago de deudas, necesitarían 53 años para terminar de pagarlas.
+* Razón entre transferencias y gastos + inversión: 0.88  
+De cada dólar que las alcaldías recibieron como transferencias, 88 centavos los destinan a atender sus gastos e inversiones. El resto al pago de deudas y de otras obligaciones.
+* Inversión por habitante: 47.28  
+Las alcaldías destinaron una media de 47.28 dólares a inversión por cada habitante
+

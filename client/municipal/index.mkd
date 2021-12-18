@@ -1,0 +1,207 @@
+%title Finanzas municipales
+%date Dic. 03, 2021
+
+%head
+
+<script type="module" src="/res/components/muni.js"></script>
+<script type="module" src="/res/components/munibudget.js"></script>
+
+%mkd
+
+# Situación financera de los municipios
+
+%html
+
+<x-years target="expenses,revenue,assets,liabilities,years-expenses,years-revenue,years-assets,years-liabilities"></x-years>
+
+<x-muniselector target="munidiv,expenses,revenue,assets,liabilities,expenses-yearly,revenue-yearly,assets-yearly,liabilities-yearly,ind-depdeu,ind-deptrf,ind-deuing,ind-invgto,ind-gtoing"></x-muniselector>
+
+%mkd
+
+Esta sección permite explorar la situación financiera y presupuestaria de los
+municipios. En primer lugar se presenta como están distribuidos los ingresos y los gastos. Luego aparecen los recursos y las obligaciones al cierre de cada ejercicio fiscal. En cada sección se agregan sugerencias sobre cómo interpretar la información.
+
+Sobre los datos acá mostrados, es importante tener presente que:
+
+- Los datos han sido recopilados y puestos a disposición del público por el
+Ministerio de Hacienda, por medio del [Portal de Transparencia Fiscal](https://www.transparenciafiscal.gob.sv).
+- Hay algunos años y para algunos municipios para los que no se cuenta con
+información.
+- Aunque se presentan datos para el año 2021, estos representan únicamente los
+meses de enero a septiembre. Habrá que esperar hasta que finalice el año para
+contar con datos completos para este período.
+- En las gráficas se comparan los valores nominales. Sin embargo, se debe tener presente que el valor del dinero cambia con el tiempo y que un dólar en la actualidad no tiene el mismo valor que tuvo hace diez años.
+
+También puedes acceder a [este recurso](./comparativo.html) para ver una comparación entre los municipios.
+
+%html
+
+<x-muni-div id="munidiv">
+
+%mkd
+
+## Situación presupuestaria
+
+### Egresos
+
+Los egresos representan salidas de fondos. Pueden estar destinadas a gastos (por ejemplo el pago de salarios), inversiones en activos (cuyo valor perdura
+en el tiempo) y pago de deudas. Un indicador que puede resultar interesante es
+qué proporción de los egresos se destinan a inversión en relación con los
+gastos. Más adelante, se presentan algunos de estos indicadores.
+
+%html
+
+<x-muni-budget-years id="expenses-yearly" contab-id="8101" content="expenses">
+</x-muni-budget-years>
+
+%mkd
+
+En la siguiente gráfica se compara el presupuesto aprobado al inicio de cada
+año, el presupuesto modificado y la ejecución. Esta última representa los
+egresos reales que una alcaldía realizó en el año correspondiente. En algunos
+casos, observará que hay diferencias considerables entre lo que se planifica y
+lo que se realiza.
+
+%html
+
+<x-muni-budget-headers id="expenses" contab-id="8101"
+    year="2010" content="expenses">
+</x-muni-budget-headers>
+
+%mkd
+
+### Ingresos
+
+Los ingresos representan las entradas de fondos. Pueden provenir de los impuestos y tasas municipales, de las transferencias que las alcaldías reciben del Gobierno Central o de deudas adquiridas con entidades financieras.
+
+%html
+
+<x-muni-budget-years id="revenue-yearly" contab-id="8101" content="revenue">
+</x-muni-budget-years>
+
+%mkd
+
+Al igual que con los egresos, en ocasiones un monto aprobado en los
+presupuestos puede ser considerablemente diferente de los ingresos que se
+reciban. Cuando los ingresos son menores a lo esperado, la alcaldía tiene que
+hacer ajustes, por ejemplo buscando nuevas fuentes de financiamiento o
+bien, en el peor de los casos, haciendo recortes en los gastos e inversiones
+proyectadas.
+
+%html
+
+<x-muni-budget-headers id="revenue" contab-id="8101"
+    year="2010" content="revenue">
+</x-muni-budget-headers>
+
+%mkd
+
+## Situación financiera
+
+Otro vía para analizar las finanzas municipales es por medio de la revisión de los recursos con que dispone una alcaldía y las obligaciones que esta tiene. Estos datos son una fotografía en un momento determinado del tiempo, generalmente el último día de cada año, que es cuando se cierran los ejercicios fiscales.
+
+### Recursos
+
+Los recursos son las existencias de dinero en efectivo, las cuentas bancarias, el mobiliario y equipo y las inversiones en proyectos.
+
+%html
+
+<x-muni-contab-years id="assets-yearly" contab-id="8101" content="assets">
+</x-muni-contab-years>
+
+%mkd
+
+En la siguiente gráfica se presenta el desglose de los recursos para cada año.
+
+%html
+
+<x-muni-contab-headers id="assets"
+    content="assets">
+</x-muni-contab-headers>
+
+%mkd
+
+### Obligaciones
+
+Las obligaciones son las deudas de la alcaldía. La forma más común de clasificar estas es entre corto y largo plazo. El corto plazo es para aquellas deudas que tienen que ser pagadas en menos de un año, mientras que las de largo plazo se van pagando en varios años.
+
+%html
+
+<x-muni-contab-years id="liabilities-yearly" contab-id="8101"
+    content="liabilities">
+</x-muni-contab-years>
+
+<x-muni-contab-headers id="liabilities" contab-id="8101"
+    year="2010" content="liabilities">
+</x-muni-contab-headers>
+
+%mkd
+
+## Razones financieras
+
+Las razones financieras ayudan a interpretar la situación de una alcaldía y compararla con otras. A continuación se presentan algunas razones financieras con una breve explicación de su significado.
+
+### Razón entre gastos e ingresos propios
+
+Esta razón nos indica en medida una alcaldía cubre sus gastos con sus propios ingresos, es decir sin depender de las transferencias del gobierno central o de préstamos. Para calcular esta razón se dividen los gastos entre los ingresos propios. Si el saldo es mayor que uno, significa que la alcaldía gasta más que los ingresos propios que recibe. En cambio, si el saldo es menor que uno, indica que la alcaldía tiene un excedente de sus ingresos propios, recursos que puede destinar a inversión o a la amortización de sus deudas.
+
+%html
+
+<x-muni-indicator id="ind-gtoing" key="GTOING" contab-id="8101"/>
+</x-muni-indicator>
+
+%mkd
+
+### Razón entre inversión y gastos
+
+Esta razón nos expresa la relación entre lo que una alcaldía destina para inversiones como proporción de sus gastos. Ambos aspectos son importantes, gastos e inversiones, pero la diferencia es que de estas últimas las alcaldías esperan una beneficio duradero en el tiempo.
+
+%html
+
+<x-muni-indicator id="ind-invgto" key="INVGTO" contab-id="8101"/>
+</x-muni-indicator>
+
+%mkd
+
+### Razón entre deuda e ingresos propios
+
+Esta razón nos indica cuantas veces es la deuda de largo plazo en relación con los ingresos propios. Una forma de interpretarla es como el número de años que una alcaldía pasaría pagando sus deudas si destinara todos sus ingresos propios a ello.
+
+%html
+
+<x-muni-indicator id="ind-deuing" key="DEUING" contab-id="8101"/>
+</x-muni-indicator>
+
+%mkd
+
+### Dependencia de las transferencias
+
+Las alcaldías dependen en diferentes grados de las transferencias que reciben del Gobierno Central y de otras fuentes. Esta razón nos indica en que medida una alcaldía depende de esas transferencias para cubrir sus gastos e inversiones.
+
+%html
+
+<x-muni-indicator id="ind-deptrf" key="DEPTRF" contab-id="8101"/>
+</x-muni-indicator>
+
+%mkd
+
+### Dependencia del endeudamiento
+
+Esta razón financiera indica que proporción de los gastos y las inversiones fueron cubiertas con endeudamiento.
+
+%html
+
+<x-muni-indicator id="ind-depdeu" key="DEPDEU" contab-id="8101"/>
+</x-muni-indicator>
+
+%mkd
+
+## ¿Cuáles son los siguientes pasos?
+
+Con la información acá presentada, se tiene un mapa de cómo están compuestas las finanzas de los municipios. En el CEMIF aún tenemos más datos cuya publicación se está preparando. Además, se puede buscar datos más detallados en cada alcaldía, ya sea por medio de su sitio web o enviando una solicitud de información.
+
+Recuerda que la participación ciudadana es más efectiva cuando se tiene el conocimiento de cómo funcionan las instituciones y de los recursos de los que estas disponen. Hagamos valer nuestra voz en los municipios.
+
+%html
+
+</x-muni-div>

@@ -1,0 +1,26 @@
+%title Finanzas municipales
+%date Dec. 03, 2021
+
+%head
+
+<script type="module" src="/res/components/muni.js"></script>
+<script type="module" src="/res/components/muniindicators.js"></script>
+
+%mkd
+
+# Finanzas municipales: comparación entre municipios
+
+En esta sección se comparan las finanzas de las alcaldías con base en los
+ingresos, los gastos, los recursos y las obligaciones. 
+
+Los datos de 2021 corresponden al período entre enero y septiembre.
+
+<x-years target="munindplot,munindtable"></x-years>
+<x-muni-sel-indicators target="munindplot,munindtable"></x-muni-sel-indicators>
+
+<x-muni-indicators-plot id="munindplot">
+</x-muni-indicators-plot>
+
+<x-muni-indicators-table id="munindtable">
+</x-muni-indicators-table>
+

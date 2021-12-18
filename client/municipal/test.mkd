@@ -1,0 +1,13 @@
+%title Example Graph
+%date Dec. 03, 2021
+
+%head
+
+<script type="module" src="/res/components/muni.js"></script>
+<script type="module" src="/res/components/munibudget.js"></script>
+
+%html
+
+<x-muni-indicator key="DEPDEU" contab-id="8101"/></x-indicator>
+
+
