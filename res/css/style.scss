@@ -1,0 +1,240 @@
+@use "sass:math";
+
+$color-a1: #002b49;
+$color-a2: #0068c9;
+$color-a3: #c8d8eb;
+$color-b1: #ff8200;
+$color-b2: #fedb00;
+$line-height: 1.5;
+$font-weight: 300;
+$font-size: 18px;
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url(../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@mixin aReverse() {
+    a {
+        color: $color-a3;
+        &:hover {
+            color: white;    
+        }
+    }
+}
+
+@mixin title() {
+    font-weight: 400;
+    color: $color-b1;
+}
+
+/** Structural elements **/
+
+html {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5rem;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/** Structural classes **/
+
+%banner {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0 1 auto;
+    justify-content: space-around;
+    width: 100%;
+    color: $color-a3;
+    font-size: 0.8rem;
+    @include aReverse;
+}
+
+.header {
+    @extend %banner;
+    align-items: center;
+    background-color: $color-a1;
+    position: fixed;
+    z-index: 100;
+    ul {
+        list-style-type: none;
+        margin: 0;
+    }
+    li {
+        display: inline;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+.footer {
+    @extend %banner;
+    margin-bottom: 0;
+    background-color: $color-a2;
+}
+
+.container {
+    max-width: 780px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    /*
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    */
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.column, .columns {
+    /*
+    display: flex;
+    flex-direction: column;
+    float: left;
+    */
+}
+
+.one {
+    max-width: math.div(100%, 12);
+}
+
+.two {
+    max-width: math.div(100%, 12) * 2;
+}
+
+.three {
+    max-width: math.div(100%, 12) * 3;
+}
+
+.four {
+    max-width: math.div(100%, 12) * 4;
+}
+
+.five {
+    max-width: math.div(100%, 12) * 5;
+}
+
+.six {
+    max-width: math.div(100%, 12) * 6;
+}
+
+.seven {
+    max-width: math.div(100%, 12) * 7;
+}
+
+.eight {
+    max-width: math.div(100%, 12) * 8;
+}
+
+.nine {
+    max-width: math.div(100%, 12) * 9;
+}
+
+.ten {
+    max-width: math.div(100%, 12) * 10;
+}
+
+.eleven {
+    max-width: math.div(100%, 12) * 11;
+}
+
+.twelve {
+    width: 100%;
+}
+
+/** Formating elements **/
+
+
+
+h1 {
+    font-size: 2rem;
+    @include title;
+}
+
+h2 {
+    font-size: 1.75rem;
+    @include title;
+}
+
+h3 {
+    font-size: 1.5rem;
+    @include title;
+}
+
+h4 {
+    font-size: 1.25rem;
+    @include title;
+}
+
+a {
+    text-decoration: none;
+    color: $color-a2;
+    &:hover {
+        color: $color-a1;
+    }
+}
+
+.right {
+    margin-left: auto;
+    margin-right: 0;
+    text-align: right;
+}
+
+.single-indicator {
+    border: 1px solid #999;
+    margin: 5px;
+    box-sizing: border-box;
+    justify-content: center;
+    .head {
+        background-color: $color-b1;
+        color: white;
+        font-weight: 400;
+        padding: 10px;
+        width: 100%;
+    }
+    .units {
+        font-size: 0.3rem;
+    }
+    .value {
+        width: 100%;
+        font-size: 4vw;
+        line-height: 4vw;
+        text-align: center;
+    }
+    .previous {
+        font-size: 0.5rem;
+        line-height: 0.7rem;
+        float: right;
+    }
+    .diff {
+        font-size: 0.5rem;
+        line-height: 0.7rem;
+        float: right;
+    }
+    .desc {
+        font-size: 0.7rem;
+        line-height: 0.9rem;
+        background-color: #EEE;
+        padding: 5px;
+        width: 100%;
+    }
+}
+
