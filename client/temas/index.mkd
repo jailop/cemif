@@ -3,14 +3,9 @@
 
 %html
 
-<div class="row">
-<div class="twelve columns">
 <img src="/pictures/desk.jpg" width="100%">
-</div>
-</div>
-%mkd
 
-# Temas
+%mkd
 
 En esta sección encontrarás recursos para analizas con mayor profundidad
 diferentes temas relacionados con las finanzas públicas.

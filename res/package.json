@@ -1,7 +1,10 @@
 {
   "dependencies": {
+    "@mdi/svg": "^6.5.95",
+    "@picocss/pico": "^1.4.1",
     "arquero": "^4.8.7",
     "d3": "^7.1.1",
+    "sass": "^1.45.0",
     "vega-embed": "^6.20.5",
     "vega-lite": "^5.2.0",
     "vega-lite-api": "^5.0.0"

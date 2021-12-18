@@ -5,7 +5,7 @@ tableTemplate.innerHTML = `
     @import "/res/css/style.css"
 </style>
 <div>
-    <table id="main"></table>
+    <table id="main" role="grid"></table>
 </div>`;
 class DataTable extends HTMLElement {
     constructor(data, headers) {

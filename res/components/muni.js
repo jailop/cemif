@@ -35,7 +35,14 @@ class Years extends HTMLElement {
             <style>
                 @import "/res/css/style.css"
             </style>
-            <select id="main"></select>`
+            <form>
+                <div class="grid">
+                    <label for="main" class="right">
+                        Ejercicio fiscal (año)
+                    </label>
+                    <div><select id="main"></select></div>
+                </div>
+            </form>`
         const shadow = this.attachShadow({mode: 'open'});
         shadow.appendChild(template.content.cloneNode(true));
         this.selElem = shadow.getElementById("main");
@@ -58,7 +65,6 @@ class Years extends HTMLElement {
                 });
                 this.updateTargets();
             });
-            shadow.appendChild(this.selElem);
     }
     updateTargets(e) {
         this.year = this.selElem.options[this.selElem.selectedIndex]
@@ -101,8 +107,15 @@ class Years extends HTMLElement {
 class Departments extends HTMLElement {
     constructor() {
         super();
+        let template = document.createElement("template");
+        template.innerHTML = `
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <select id="main"></select>`
         const shadow = this.attachShadow({mode: 'open'});
-        this.selElem = document.createElement('select');
+        shadow.appendChild(template.content.cloneNode(true));
+        this.selElem = shadow.getElementById("main");
         const option = document.createElement('option');
         option.setAttribute('department', '');
         this.selElem.appendChild(option);
@@ -124,7 +137,6 @@ class Departments extends HTMLElement {
                     .getAttribute('value'));
             this.dispatchEvent(new Event('change'));
         })
-        shadow.appendChild(this.selElem);
     }
     static get observedAttributes() {
         return ['department'];
@@ -132,22 +144,21 @@ class Departments extends HTMLElement {
     attributeChangedCallback(name, oldValue, newValue) {
         if (oldValue == newValue)
             return;
-        if (name == 'department') {
-            /* To be implemented
-            let options = this.selElem.getChildren();
-            for (let i = 0; i < options.length; i++)
-                if (options[i].value == newValue)
-                    options[i].setAttribute('selected', '')
-            */
-        }
     }
 };
 
 class Municipalities extends HTMLElement {
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'});
-        this.selElem = document.createElement('select');
+        let template = document.createElement("template");
+        template.innerHTML = `
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <select id="main"></select>`
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(template.content.cloneNode(true));
+        this.selElem = shadow.getElementById("main");
         this.updateOptions();
         this.selElem.addEventListener('change', e => {
             const option = this.selElem.options[this.selElem.selectedIndex];
@@ -157,7 +168,6 @@ class Municipalities extends HTMLElement {
             this.setAttribute('municipality', option.text);
             this.dispatchEvent(new Event('change'));
         });
-        this.shadow.appendChild(this.selElem);
     }
 
     updateOptions() {
@@ -208,20 +218,21 @@ class MuniSelector extends HTMLElement {
         super();
         const shadow = this.attachShadow({mode: 'open'});
         shadow.innerHTML = `
-            <div class="row">
-                <div class="column">
-                    <label>Departamento</label>
-                    <div>
-                      <x-departments id="dept"></x-departments>
-                    </div>
-                </div>
-                <div class="row">
-                    <label>Municipio</label>
-                    <div>
-                      <x-municipalities id="muni"></x-municipalities>
-                    </div>
-                </div>
-            </div>`
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <form>
+            <div class="grid">
+                <label for="dept">
+                    Departamento
+                    <x-departments id="dept"></x-departments>
+                </label>
+                <label for="muni">
+                    Municipio
+                    <x-municipalities id="muni"></x-municipalities>
+                </label>
+            </div>
+            </form>`
         this.setAttribute('department', '');
         this.setAttribute('municipality-id', '');
         this.dept = shadow.getElementById('dept');

@@ -13,7 +13,7 @@ aq.addFunction("d3format", d3.format(",.2f"));
 const selectTemplate = document.createElement("template");
 selectTemplate.innerHTML = `
 <style>
-    @import "/css/style.css"
+    @import "/res/css/style.css"
 </style>
 <div>
 <div><select id="main"></select></div>
@@ -23,7 +23,7 @@ selectTemplate.innerHTML = `
 const divTemplate = document.createElement("template");
 divTemplate.innerHTML = `
 <style>
-    @import "/css/style.css"
+    @import "/res/css/style.css"
 </style>
 <div id="main"></div>`
 

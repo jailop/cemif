@@ -3,14 +3,9 @@
 
 %html
 
-<div class="row">
-<div class="twelve columns">
 <img src="/pictures/topics.jpg" width="100%">
-</div>
-</div>
 
 %mkd
 
-# Actualidad
-
-Acá encontrarás información útil sobre temas actualidad...
+* [Respuesta COVID-19: Transferencias a municipios](./2021/veeduria4/index.html)  
+El Comité de Seguimiento y Veeduría Ciudadana presentó en abril de 2021 un informe sobre las transferencias de fondos hechas a los gobiernos municipales en 2020 para responder a la pandemia del COVID-19. Hizo una comparación entre los fondos transferidos y los casos confirmados de COVID-19 y encontró que hay una correlación inversa, es decir que en promedio a los municipios con menos casos de infecciones se les trasfirieron más recursos. En esta nota se pueden consultar interactivamente los datos divulgados por el Comité.

@@ -1,25 +1,12 @@
 %title Centro de Monitoreo e Incicencia Fiscal
-%date Dic. 11, 2021
 
 %html
 
-<div class="row">
-<div class="twelve columns">
 <img src="/pictures/elsalvador-map.jpg" width="100%">
-</div>
-</div>
 
 %mkd
 
-# Centro de Monitoreo e Incidencia Fiscal
-
-El Centro de Monitoreo e Incidencia Fiscal (CEMIF) es un observatorio
-ciudadano que da seguimiento a las finanzas y los presupuestos públicos en El
-Salvador.
-
-Para realizar el seguimiento, en el CEMIF se recopilan datos sobre los ingresos
-y los gastos de las oficinas públicas. Con estos datos se realizan análisis de
-la situación y las tendencias en el manejo de los recursos.
+El Centro de Monitoreo e Incidencia Fiscal (CEMIF) es un observatorio ciudadano que da seguimiento a las finanzas y los presupuestos públicos en El Salvador. Para realizar el seguimiento, en el CEMIF se recopilan datos sobre los ingresos y los gastos de las oficinas públicas. Con estos datos se realizan análisis de la situación y las tendencias en el manejo de los recursos.
 
 Para que las promesas que los candidatos y los funcionarios hacen puedan ser
 cumplidas, se necesitan recursos. Una decisión, referida a la construcción de
@@ -32,5 +19,21 @@ decisiones que los funcionarios públicos toman sobre la asignación y uso de lo
 recursos públicos. Para tal fin, el CEMIF brinda orientación al ciudadano sobre
 cómo acceder, interpretar y usar los datos financieros.
 
+%html
 
+<div class="grid">
+    <article>
+        <header><a href="/actualidad">Actualidad</a></header>
+        Datos y análisis breves sobre temas de coyuntura.
+    </article>
+    <article>
+        <header><a href="/temas">Temas</a></header>
+        Presentación detallada de datos sobre áreas claves de la gestión pública, como presupuestos, impuestos y finanzas municipales.
+    </article>
+    <article>
+        <header><a href="tutoriales">Tutoriales</a></header>
+        Guías sobre cómo buscar, recolectar e interpretar la información
+        que las instituciones públicas brindan acerca de sus finanzas.
+    </article>
+</div>
 

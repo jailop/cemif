@@ -1,9 +1,15 @@
-%title Acerca de
+%title Acerca del CEMIF
 %date Dic. 11, 2021
 
-%mkd
+%html
 
-# Acerca del CEMIF
+<div class="grid">
+    <div class="center">
+        <img src="/res/imgs/funde-cemif.png">
+    </div>
+</div>
+
+%mkd
 
 El CEMIF es un observatorio ciudadano que da seguimiento a los presupuestos
 públicos en El Salvador. Es parte de los esfuerzos de incidencia en las

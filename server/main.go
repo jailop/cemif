@@ -2,10 +2,11 @@ package main
 
 import (
     // "fmt"
+    // `"log"
+    "mime"
     "github.com/gin-gonic/gin"
     "github.com/gin-contrib/gzip"
     "github.com/gin-contrib/static"
-    "mime"
 )
 
 func run() {

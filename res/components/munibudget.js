@@ -9,13 +9,17 @@ class MuniBudgetHeader extends HTMLElement {
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'});
-        this.plotDiv = document.createElement('div');
-        this.plotDiv.setAttribute('id', 'plot');
-        this.plotDiv.setAttribute('class', 'plot');
-        this.plotDiv.setAttribute('class', 'plot');
-        this.plotDiv.style.width = '100%';
-        this.shadow.appendChild(this.plotDiv);
+        let template = document.createElement("template");
+        template.innerHTML = `
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <div class="grid">
+                <div id="main"></div>
+            </div>`
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(template.content.cloneNode(true));
+        this.plotDiv = shadow.getElementById("main");
         this.year = this.hasAttribute('year') ? this.getAttribute('year') : '';
         this.municipality = this.hasAttribute('municipality') ?
             this.getAttribute('municipality') : '';
@@ -155,12 +159,17 @@ class MuniBudgetYears extends HTMLElement {
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'});
-        this.plotDiv = document.createElement('div');
-        this.plotDiv.setAttribute('id', 'plot');
-        this.plotDiv.setAttribute('class', 'plot');
-        this.plotDiv.style.width = '100%';
-        this.shadow.appendChild(this.plotDiv);
+        let template = document.createElement("template");
+        template.innerHTML = `
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <div class="grid">
+                <div id="main"></div>
+            </div>`
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(template.content.cloneNode(true));
+        this.plotDiv = shadow.getElementById("main");
         this.municipality = this.hasAttribute('municipality') ?
             this.getAttribute('municipality') : '';
         this.contabId = this.hasAttribute('contab-id') ?
@@ -309,13 +318,17 @@ class MuniContabHeader extends HTMLElement {
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'});
-        this.plotDiv = document.createElement('div');
-        this.plotDiv.setAttribute('id', 'plot');
-        this.plotDiv.setAttribute('class', 'plot');
-        this.plotDiv.setAttribute('class', 'plot');
-        this.plotDiv.style.width = '100%';
-        this.shadow.appendChild(this.plotDiv);
+        let template = document.createElement("template");
+        template.innerHTML = `
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <div class="grid">
+                <div id="main"></div>
+            </div>`
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(template.content.cloneNode(true));
+        this.plotDiv = shadow.getElementById("main");
         this.year = this.hasAttribute('year') ? this.getAttribute('year') : '';
         this.municipality = this.hasAttribute('municipality') ?
             this.getAttribute('municipality') : '';
@@ -444,12 +457,17 @@ class MuniContabYears extends HTMLElement {
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'});
-        this.plotDiv = document.createElement('div');
-        this.plotDiv.setAttribute('id', 'plot');
-        this.plotDiv.setAttribute('class', 'plot');
-        this.plotDiv.style.width = '100%';
-        this.shadow.appendChild(this.plotDiv);
+        let template = document.createElement("template");
+        template.innerHTML = `
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <div class="grid">
+                <div id="main"></div>
+            </div>`
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(template.content.cloneNode(true));
+        this.plotDiv = shadow.getElementById("main");
         this.municipality = this.hasAttribute('municipality') ?
             this.getAttribute('municipality') : '';
         this.contabId = this.hasAttribute('contab-id') ?
@@ -589,12 +607,17 @@ class MuniIndicator extends HTMLElement {
 
     constructor() {
         super();
-        this.shadow = this.attachShadow({mode: 'open'});
-        this.plotDiv = document.createElement('div');
-        this.plotDiv.setAttribute('id', 'plot');
-        this.plotDiv.setAttribute('class', 'plot');
-        this.plotDiv.style.width = '100%';
-        this.shadow.appendChild(this.plotDiv);
+        let template = document.createElement("template");
+        template.innerHTML = `
+            <style>
+                @import "/res/css/style.css"
+            </style>
+            <div class="grid">
+                <div id="main"></div>
+            </div>`
+        const shadow = this.attachShadow({mode: 'open'});
+        shadow.appendChild(template.content.cloneNode(true));
+        this.plotDiv = shadow.getElementById("main");
         this.municipality = this.hasAttribute('municipality') ?
             this.getAttribute('municipality') : '';
         this.contabId = this.hasAttribute('contab-id') ?
