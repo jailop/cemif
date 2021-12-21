@@ -1,14 +1,10 @@
-%title Finanzas municipales
+%title Situación financiera y presupuestaria de los municipios
 %date Dic. 03, 2021
 
 %head
 
 <script type="module" src="/res/components/muni.js"></script>
 <script type="module" src="/res/components/munibudget.js"></script>
-
-%mkd
-
-# Situación financera de los municipios
 
 %html
 

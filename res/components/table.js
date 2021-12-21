@@ -2,10 +2,10 @@ export { DataTable };
 const tableTemplate = document.createElement("template");
 tableTemplate.innerHTML = `
 <style>
-    @import "/res/css/style.css"
+    @import "/css/style.css"
 </style>
 <div>
-    <table id="main" role="grid"></table>
+    <table id="main"></table>
 </div>`;
 class DataTable extends HTMLElement {
     constructor(data, headers) {

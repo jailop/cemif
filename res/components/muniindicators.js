@@ -44,7 +44,7 @@ class SelectIndicators extends HTMLElement {
                 this.selElem.appendChild(option);
                 })
         .then(() => {
-            this.selElem.addEventListener('change', () => { 
+            this.selElem.addEventListener('change', () => {
                     this.updateTargets()
             });
             this.updateTargets();
@@ -138,7 +138,7 @@ class MuniIndicators extends HTMLElement {
         let root = this;
         let urlData = "/res/data/muni-indicators.csv";
         let csv = await aq.loadCSV(urlData);
-        
+
         const t = csv
             .params({
                 year  : year,
@@ -179,7 +179,7 @@ class PlotMuniIndicators extends MuniIndicators {
         if (data.length == 0)
             return;
         let scale = "linear";
-        if (root.scale == "log") 
+        if (root.scale == "log")
             scale = "log";
         let spec = {
             "mark": {
@@ -209,7 +209,7 @@ class PlotMuniIndicators extends MuniIndicators {
                     "title": "",
                     "scale":  {
                        "type": scale,
-                    }   
+                    }
                 },
 
             },

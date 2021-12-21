@@ -1,0 +1,5 @@
+DBUSER=dbuser
+DBPASS=dbpass
+DBSERV=localhost
+DBPORT=3306
+DBNAME=database

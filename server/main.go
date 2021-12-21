@@ -24,6 +24,8 @@ func run() {
     }
     router.Use(static.Serve("/", static.LocalFile("../client", false)))
     router.Use(static.Serve("/res", static.LocalFile("../res", false)))
+    router.Use(static.Serve("/notebooks", 
+        static.LocalFile("../notebooks", false)))
     router.StaticFile("/favicon.ico", "../res/favicon.ico")
     router.Run()
 }

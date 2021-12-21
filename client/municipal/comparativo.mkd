@@ -1,4 +1,4 @@
-%title Finanzas municipales
+%title Comparación entre municipios
 %date Dec. 03, 2021
 
 %head
@@ -8,12 +8,16 @@
 
 %mkd
 
-# Finanzas municipales: comparación entre municipios
-
 En esta sección se comparan las finanzas de las alcaldías con base en los
-ingresos, los gastos, los recursos y las obligaciones. 
+ingresos, los gastos, los recursos y las obligaciones. Por ejemplo, en 2020 algunos medias fueron las siguientes:
 
-Los datos de 2021 corresponden al período entre enero y septiembre.
+* Las alcaldías gastaron 5.4 dólares por cada dólar que recibieron como ingreso propio.
+* Por cada dólar que gastaron, invirtieron 37 centavos.
+* Al cierre del año, debían 53.28 dólares por cada dólar que recibieron como ingreso propio. Es decir que si las alcaldías destinaran todos sus ingresos propios al pago de deudas, tardarían 53 años en liquidarlas.
+* De cada dólar que las alcaldías recibieron como transferencias, 88 centavos los destinaron a atender sus gastos e inversiones; el resto al pago de deudas y de otras obligaciones.
+* Las alcaldías destinaron una media de 47.28 dólares a inversión por cada habitante (con base en el censo de 2007).
+
+**Nota**: Los datos de 2021 corresponden al período entre enero y septiembre.
 
 <x-years target="munindplot,munindtable"></x-years>
 <x-muni-sel-indicators target="munindplot,munindtable"></x-muni-sel-indicators>

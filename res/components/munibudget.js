@@ -14,8 +14,7 @@ class MuniBudgetHeader extends HTMLElement {
             <style>
                 @import "/res/css/style.css"
             </style>
-            <div class="grid">
-                <div id="main"></div>
+                <div id="main" class="row"></div>
             </div>`
         const shadow = this.attachShadow({mode: 'open'});
         shadow.appendChild(template.content.cloneNode(true));
@@ -145,7 +144,7 @@ class MuniBudgetHeader extends HTMLElement {
                     "scale": {
                         "scheme": "dark2"
                     }
-                }
+                },
             },
             "config": {
                 "numberFormat": "~s",
@@ -164,9 +163,7 @@ class MuniBudgetYears extends HTMLElement {
             <style>
                 @import "/res/css/style.css"
             </style>
-            <div class="grid">
-                <div id="main"></div>
-            </div>`
+            <div id="main" class="row"></div>`
         const shadow = this.attachShadow({mode: 'open'});
         shadow.appendChild(template.content.cloneNode(true));
         this.plotDiv = shadow.getElementById("main");
@@ -324,7 +321,7 @@ class MuniContabHeader extends HTMLElement {
                 @import "/res/css/style.css"
             </style>
             <div class="grid">
-                <div id="main"></div>
+                <div id="main" class="row"></div>
             </div>`
         const shadow = this.attachShadow({mode: 'open'});
         shadow.appendChild(template.content.cloneNode(true));
@@ -462,9 +459,7 @@ class MuniContabYears extends HTMLElement {
             <style>
                 @import "/res/css/style.css"
             </style>
-            <div class="grid">
-                <div id="main"></div>
-            </div>`
+            <div id="main" class="row"></div>`
         const shadow = this.attachShadow({mode: 'open'});
         shadow.appendChild(template.content.cloneNode(true));
         this.plotDiv = shadow.getElementById("main");
@@ -612,9 +607,7 @@ class MuniIndicator extends HTMLElement {
             <style>
                 @import "/res/css/style.css"
             </style>
-            <div class="grid">
-                <div id="main"></div>
-            </div>`
+            <div id="main" class="row"></div>`
         const shadow = this.attachShadow({mode: 'open'});
         shadow.appendChild(template.content.cloneNode(true));
         this.plotDiv = shadow.getElementById("main");

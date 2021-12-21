@@ -1,8 +1,14 @@
+TSC = tsc -t es6 -m es6
+
 all: table.js \
-	 singleindicator.js
+	 singleindicator.js \
+	 annualbudget.js
 
 table.js: table.ts
-	tsc -t es6 table.ts
+	${TSC} table.ts
 
 singleindicator.js: singleindicator.ts
-	tsc -t es6 singleindicator.ts
+	${TSC} singleindicator.ts
+
+annualbudget.js: annualbudget.ts
+	${TSC} annualbudget.ts

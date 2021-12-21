@@ -102,6 +102,7 @@ div {
 .row {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .column, .columns {
@@ -167,6 +168,7 @@ div {
 h1 {
     font-size: 2rem;
     @include title;
+    line-height: 2.2rem;
 }
 
 h2 {
@@ -236,5 +238,9 @@ a {
         padding: 5px;
         width: 100%;
     }
+}
+
+.plot {
+    width: 100%;
 }
 
