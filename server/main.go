@@ -2,16 +2,27 @@ package main
 
 import (
     // "fmt"
-    // `"log"
+    "os"
+    "log"
     "mime"
     "github.com/gin-gonic/gin"
     "github.com/gin-contrib/gzip"
     "github.com/gin-contrib/static"
+    "github.com/joho/godotenv"
+    "github.com/gin-gonic/autotls"
 )
 
 func run() {
+    err := godotenv.Load()
+    if err != nil {
+        log.Fatal("Error loading .env file")
+    }
+    hostname := os.Getenv("HOSTNAME")
+    runmode := os.Getenv("RUNMODE")
     mime.AddExtensionType(".js", "text/javascript")
-    // gin.SetMode("debug")
+    if runmode == "release" {
+        gin.SetMode(gin.ReleaseMode)
+    }
     router := gin.Default()
     router.SetTrustedProxies([]string{"127.0.0.1", "192.168.1.106"})
     router.Use(gzip.Gzip(gzip.DefaultCompression))
@@ -28,6 +39,7 @@ func run() {
         static.LocalFile("../notebooks", false)))
     router.StaticFile("/favicon.ico", "../res/favicon.ico")
     router.Run()
+    log.Fatal(autotls.Run(router, hostname))
 }
 
 func main() {
