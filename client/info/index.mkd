@@ -3,10 +3,8 @@
 
 %html
 
-<div class="grid">
-    <div class="center">
+<div class="row">
         <img src="/res/imgs/funde-cemif.png">
-    </div>
 </div>
 
 %mkd

@@ -3,11 +3,8 @@
 
 %mkd
 
-# Equipo
-
 El Centro de Monitoreo e Incidencia Fiscal (CEMIF) es parte de la Fundación
 Nacional para el Desarrollo (FUNDE). El equipo a cargo del trabajo de la
 iniciativa está integrado por las siguientes personas:
 
 [FOTO] Nombre. Perfil semiformal...
-

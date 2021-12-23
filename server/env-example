@@ -1,5 +1,6 @@
 HOSTNAME=localhost
 RUNMODE=debug
+LOGPATH=../files/log/
 DBUSER=dbuser
 DBPASS=dbpass
 DBSERV=localhost

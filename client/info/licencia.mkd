@@ -3,8 +3,6 @@
 
 %mkd
 
-# Licencia y derechos de autor
-
 La información contenida en este sitio es de acceso libre. Ha sido construida
 principalmente con base en información pública proporcionada por oficinas
 gubernamentales.

@@ -1,9 +1,10 @@
 package main
 
 import (
-    // "fmt"
+    "fmt"
     "os"
     "log"
+    "time"
     "mime"
     "github.com/gin-gonic/gin"
     "github.com/gin-contrib/gzip"
@@ -12,7 +13,22 @@ import (
     "github.com/gin-gonic/autotls"
 )
 
-func run() {
+func Logger() gin.HandlerFunc {
+    return func(c *gin.Context) {
+        t := time.Now()
+        c.Next()
+        path := os.Getenv("LOGPATH")
+        logfile := fmt.Sprintf("%s%04d%02d.log", path, t.Year(), t.Month())
+        f, _ := os.OpenFile(logfile, 
+            os.O_APPEND | os.O_WRONLY | os.O_CREATE, 0600)
+        defer f.Close()
+        fmt.Fprintf(f, "%s|%s|%s|%s|%d\n", time.Now().String(), 
+            time.Since(t).String(), c.Request.Method, 
+            c.Request.URL.Path, c.Writer.Status())
+    }
+}
+
+func Run() {
     err := godotenv.Load()
     if err != nil {
         log.Fatal("Error loading .env file")
@@ -23,8 +39,8 @@ func run() {
     if runmode == "release" {
         gin.SetMode(gin.ReleaseMode)
     }
-    router := gin.Default()
-    router.SetTrustedProxies([]string{"127.0.0.1", "192.168.1.106"})
+    router := gin.New()
+    router.Use(Logger())
     router.Use(gzip.Gzip(gzip.DefaultCompression))
     v2 := router.Group("/api/v2")
     {
@@ -38,10 +54,13 @@ func run() {
     router.Use(static.Serve("/notebooks", 
         static.LocalFile("../notebooks", false)))
     router.StaticFile("/favicon.ico", "../res/favicon.ico")
-    router.Run()
-    log.Fatal(autotls.Run(router, hostname))
+    if runmode == "release" {
+    	log.Fatal(autotls.Run(router, hostname))
+    } else {
+        router.Run()
+    }
 }
 
 func main() {
-    run()
+    Run()
 }

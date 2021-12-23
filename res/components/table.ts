@@ -1,13 +1,15 @@
 export { DataTable };
 
+import "../node_modules/d3/dist/d3.js";
+
 const tableTemplate = document.createElement("template");
 tableTemplate.innerHTML = `
-<style>
-    @import "/css/style.css"
-</style>
-<div>
-    <table id="main"></table>
-</div>`
+    <style>
+        @import "/css/style.css"
+    </style>
+    <div>
+        <table id="main"></table>
+    </div>`
 
 class DataTable extends HTMLElement {
     data : object[];
@@ -49,8 +51,15 @@ class DataTable extends HTMLElement {
         for (let i = 0; i < this.data.length; i++) {
             let row = document.createElement("tr");
             row.innerHTML = "";
+            i = 0;
             for (let name in this.data[i]) {
-                row.innerHTML += '<td width="' + width + '%">' + this.data[i][name] + '</td>';
+                row.innerHTML += '<td width="' + width + '%">';
+                if (i != 2)
+                    row.innerHTML += this.data[i][name];
+                else
+                    row.innerHTML += ${d3.format(",.2f")(data[i][name]);
+                row.innerHTML += '</td>';
+                i++;
             }
             body.appendChild(row);
         }

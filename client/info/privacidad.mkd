@@ -1,9 +1,7 @@
-%title Privacidad
-%date Dic. 11, 2021
+%title Política de privacidad
+%date Dic. 23, 2021
 
 %mkd
-
-# Política de privacidad
 
 En este sitio no se recopilan datos personales ni de navegación de los usuarios.
 No se requiere de registro para hacer uso de los servicios. Tampoco se registran
@@ -13,5 +11,3 @@ que los usuarios hacen del sitio.
 En algunos casos, ciertos archivos de los datos financieros son almacenados en
 la computadora del usuario con la finalidad de hacer un mejor uso de su conexión
 a Internet.
-
-

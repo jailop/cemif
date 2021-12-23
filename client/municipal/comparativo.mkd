@@ -1,5 +1,5 @@
 %title Comparación entre municipios
-%date Dec. 03, 2021
+%date Dec. 23, 2021
 
 %head
 
@@ -27,4 +27,3 @@ ingresos, los gastos, los recursos y las obligaciones. Por ejemplo, en 2020 algu
 
 <x-muni-indicators-table id="munindtable">
 </x-muni-indicators-table>
-

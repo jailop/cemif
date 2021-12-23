@@ -231,15 +231,17 @@ class TableMuniIndicators extends MuniIndicators {
         super();
     }
     updateDisplay(data) {
+        /*
         let div = document.createElement("div");
         let table = new DataTable(data, ["Municipio", "Departamento", this.label]);
         div.appendChild(table);
         div.setAttribute("class", "table");
         this.div.innerHTML = "";
         this.div.appendChild(div);
-        /*
+        */
+
         let root = this;
-        console.log(root.label);
+        // console.log(root.label);
         let div = document.createElement("div");
         div.setAttribute("class", "overflow");
         div.style.overflow = "auto";
@@ -256,13 +258,13 @@ class TableMuniIndicators extends MuniIndicators {
             row.innerHTML = `
                 <td width="33%">${data[i].municipality}</td>
                 <td width="33%">${data[i].department}</td>
-                <td width="33%" class="text-right">${d3.format(",.2f")(data[i].value)}</td>`;
+                <td width="33%" class="right">${d3.format(",.2f")(data[i].value)}</td>`;
             table.appendChild(row);
         }
         root.div.innerHTML = "";
         div.appendChild(table);
         root.div.appendChild(div);
-        */
+
     }
 }
 

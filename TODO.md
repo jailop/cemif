@@ -12,3 +12,7 @@ Style:
 
 - Zoom para las gráficas
 - Remove dots in bottom links
+
+Install:
+
+- python requirements
