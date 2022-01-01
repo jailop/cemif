@@ -264,6 +264,7 @@ class MuniSelector extends HTMLElement {
             }
         });
     }
+    
 
     connectedCallback() {
         this.muni.setAttribute('department',
