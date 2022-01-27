@@ -11,6 +11,8 @@ import (
     "github.com/gin-contrib/static"
     "github.com/joho/godotenv"
     "github.com/gin-gonic/autotls"
+    "github.com/gin-contrib/sessions"
+    "github.com/gin-contrib/sessions/cookie"
 )
 
 func Logger() gin.HandlerFunc {
@@ -19,11 +21,11 @@ func Logger() gin.HandlerFunc {
         c.Next()
         path := os.Getenv("LOGPATH")
         logfile := fmt.Sprintf("%s%04d%02d.log", path, t.Year(), t.Month())
-        f, _ := os.OpenFile(logfile, 
+        f, _ := os.OpenFile(logfile,
             os.O_APPEND | os.O_WRONLY | os.O_CREATE, 0600)
         defer f.Close()
-        fmt.Fprintf(f, "%s|%s|%s|%s|%d\n", time.Now().String(), 
-            time.Since(t).String(), c.Request.Method, 
+        fmt.Fprintf(f, "%s|%s|%s|%s|%d\n", time.Now().String(),
+            time.Since(t).String(), c.Request.Method,
             c.Request.URL.Path, c.Writer.Status())
     }
 }
@@ -40,6 +42,8 @@ func Run() {
         gin.SetMode(gin.ReleaseMode)
     }
     router := gin.New()
+    store := cookie.NewStore([]byte("secret"))
+    router.Use(sessions.Sessions("cemifsession", store))
     router.Use(Logger())
     router.Use(gzip.Gzip(gzip.DefaultCompression))
     v2 := router.Group("/api/v2")
@@ -51,7 +55,7 @@ func Run() {
     }
     router.Use(static.Serve("/", static.LocalFile("../client", false)))
     router.Use(static.Serve("/res", static.LocalFile("../res", false)))
-    router.Use(static.Serve("/notebooks", 
+    router.Use(static.Serve("/notebooks",
         static.LocalFile("../notebooks", false)))
     router.StaticFile("/favicon.ico", "../res/favicon.ico")
     if runmode == "release" {
