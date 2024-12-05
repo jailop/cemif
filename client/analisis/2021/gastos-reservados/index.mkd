@@ -1,0 +1,57 @@
+%title Gastos reservados 2012-2017
+%date Dic. 21, 2021
+
+%head
+
+<script type="module" src="/res/components/plots.js"></script>
+
+%mkd
+
+En El Salvador, los gastos reservados han representado una de las principales fuentes de corrupción. Los ex presidentes Elías Saca (2004-2009) y Mauricio Funes (2009-2014) fueron acusados de desviar estos fondos para hacer pagos ilegales a funcionarios y alimentar cuentas personales.
+
+Mediante el uso de la Ley de Acceso a la Información Pública, los ciudadanos lograron conocer al menos a los montos globales usados en la Presidencia de la República como gastos reservados.  En la siguiente gráfica se observan los presupuestos aprobados, modificados y ejecutados de dicha partida para el período de 2012 a 2017.
+
+%html
+
+<x-barplot
+    src="./gastos-reservados-presidencia-2012-2017.csv"
+    x="year" y="value" color="moment"
+    xlabel="Ejercicio fiscal" ylabel="Monto (USD)"
+    colorlabel="Momentos"
+    order="Aprobado,Modificado,Devengado"
+    title="Presidencia de la República - 54315 Gastos Reservados"></x-barplot>
+
+%mkd
+
+En la gráfica anterior se puede apreciar cómo el presupuesto era incrementado durante la ejecución, generalmente sin conocimiento ni aprobación de la Asamblea Legislativa. Por ejemplo, en el año 2013 el presupuesto aprobado fue USD 21.2 millones, pero en la ejecución fue incrementado a USD 81.7 millones.
+
+Los fondos en su mayoría provinieron del fondo general, pero también se tomaron recursos de préstamos y donaciones. En la siguiente gráfica se observan años, como 2012, 2014 y 2015, en los que hay fondos provenientes de préstamos y donaciones. Tales fondos se tomaron sin el consentimiento de los organismos internacionales que habían
+aportado dichos recursos.
+
+%html
+
+<x-stacked-barplot
+    src="./gastos-reservados-presidencia-2012-2017.csv"
+    x="year" y="value" color="source"
+    xlabel="Ejercicio fiscal" ylabel="Monto (USD)"
+    colorlabel="Fuente de financiamiento"
+    order="1 FONDO GENERAL,3 PRESTAMOS EXTERNOS,5 DONACIONES"
+    filter="datum.moment == 'Devengado'"
+    title="Gastos reservados por fuente de financiamiento"></x-stacked-barplot>
+
+%mkd
+
+A partir de 2019, los gastos reservados fueron concentrados en el Organismo de Inteligencia del Estado y la información fue ocultada totalmente. En la actualidad ni siquiera es posible conocer montos globales como los presentados en las gráficas anteriores.
+
+Aunque en las democracias es legítimo que ciertos gastos se realicen bajo reserva, la misma tiene que ser de carácter temporal y en todo caso, el uso de los recursos tiene que ser auditado por la Corte de Cuentas y vigilado por la Asamblea Legislativa.
+
+Es importante mantener la presión ciudadana demandando que se rindan cuentas de los gastos reservados o secretos. Solo en esa forma se evitará la arbitrariedad y la corrupción en el uso de estos fondos.
+
+**Referencias**
+
+* Fundación Nacional para el Desarrollo (2021). _De los gastos reservados de la partida 54315 de la presidencia a los gastos reservados del OIE_ (documento de opinión). <http://www.repo.funde.org/id/eprint/1776/>
+* López, J., Rodríguez, R. y Estrada, J. (2018). _Manejo de los gastos reservados de la presidencia : hallazgos y propuestas_. Fundación Nacional para el Desarrollo. <http://www.repo.funde.org/id/eprint/1472/>
+
+**Recursos**
+
+* [Dataset](./gastos-reservados-presidencia-2012-2017.csv)

@@ -1,0 +1,14 @@
+%title Análisis
+%data Dic. 23, 2021
+
+%html
+
+<img src="/pictures/participantes-02.jpg" width="100%">
+
+%mkd
+
+
+* [Gastos reservados 2012-2017](./2021/gastos-reservados/index.html)  
+En El Salvador, los gastos reservados han representado una de las principales fuentes de corrupción. Los ex presidentes Elías Saca (2004-2009) y Mauricio Funes (2009-2014) fueron señalados de desviar estos fondos para hacer pagos ilegales a funcionarios y desviar recursos a cuentas personales. En esta nota se reseñan los datos de los gastos reservados entre los años 2012 y 2017.
+* [Respuesta COVID-19: Transferencias a municipios](./2021/veeduria4/index.html)  
+El Comité de Seguimiento y Veeduría Ciudadana presentó en abril de 2021 un informe sobre las transferencias de fondos hechas a los gobiernos municipales en 2020 para responder a la pandemia del COVID-19. Hizo una comparación entre los fondos transferidos y los casos confirmados de COVID-19 y encontró que hay una correlación inversa, es decir que en promedio a los municipios con menos casos de infecciones se les trasfirieron más recursos. En esta nota se pueden consultar interactivamente los datos divulgados por el Comité.

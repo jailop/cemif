@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Modificaciones presupuestarias</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/res/css/style.css"/>
+        
+<script type="module" src="/res/components/plots.js"></script>
+<script type="module" src="/res/components/muni.js"></script>
+
+
+    </head>
+<body>
+
+    <div class="header">
+        <div>
+            <big>Centro de Monitoreo e Incidencia Fiscal</big>
+        </div>
+        <div class="right">
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/analisis/">Análisis</a></li>
+                <!--<li><a href="/temas/">Temas</a></li>-->
+                <li><a href="/tutoriales/">Tutorial</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Modificaciones presupuestarias</h1>
+     
+<p>Una cosa es el presupuesto que aprueban los diputados y otra lo que realmente
+se termina ejecutando. Durante el año surgen nuevas necesidades y esto obliga
+a que las asignaciones presupuestarias se modifiquen, ya sea para reducirlas o
+para incrementarlas. Generalmente estas modificaciones ocurren sin que la
+ciudadanía esté debidamente informada sobre las motivaciones de las mismas y
+las implicaciones que estás tienen. Por ejemplo, una reducción en el
+presupuesto de salud o de educación puede implicar un recorte en la cobertura
+de los servicios.</p>
+<x-years target="shrinkages,rises"></x-years>
+
+<h2>Disminuciones presupuestarias</h2>
+<p>En esta gráfica se presentan las instituciones que sufrieron recortes en su
+presupuesto en el año seleccionado.</p>
+<x-barplot-filtered-by-year id="shrinkages"
+    year="2021"
+    src="./modificaciones.csv"
+    x="office_name" y="shifted" color="year"
+    xlabel="Ejercicio fiscal" ylabel="Monto (USD)"
+    colorlabel="Ejercicio fiscal"
+    filter="datum.shifted < 0"
+    title="Reducciones presupuestarias"></x-barplot-filtered-by-year>
+
+<h2>Aumentos presupuestarios</h2>
+<p>En contrapartida, la siguiente gráfica indica las instituciones que vieron
+incrementados sus presupuestos en el año seleccionado.</p>
+<x-barplot-filtered-by-year id="rises"
+    year="2021"
+    src="./modificaciones.csv"
+    x="office_name" y="shifted" color="year"
+    xlabel="Ejercicio fiscal" ylabel="Monto (USD)"
+    colorlabel="Ejercicio fiscal"
+    filter="datum.shifted >= 0"
+    title="Refuerzos presupuestarios"></x-barplot-filtered-by-year>
+
+<h2>Disminuciones relativas</h2>
+<p>Una forma más conviente de comparar las disminuciones presupuestarias es
+en relación al porcentaje que estás representan del presupuesto aprobado.</p>
+<x-barplot-filtered-by-year id="shrinkages"
+    year="2021"
+    src="./modificaciones.csv"
+    x="office_name" y="ratio" color="year"
+    xlabel="Ejercicio fiscal" ylabel="Porcentaje"
+    colorlabel="Ejercicio fiscal"
+    filter="datum.shifted < 0"
+    title="Reducciones presupuestarias"></x-barplot-filtered-by-year>
+
+<h2>Aumentos relativos</h2>
+<p>Igual, se puede hacer el análisis de los aumentos en términos relativos, es decir
+como proporción del presupuesto aprobado.</p>
+<x-barplot-filtered-by-year id="rises"
+    year="2021"
+    src="./modificaciones.csv"
+    x="office_name" y="ratio" color="year"
+    xlabel="Ejercicio fiscal" ylabel="Porcentaje"
+    colorlabel="Ejercicio fiscal"
+    filter="datum.shifted >= 0"
+    title="Refuerzos presupuestarios"></x-barplot-filtered-by-year>
+
+<h2>Siguientes pasos</h2>
+<p>Los números por si mismos no explican la manera en que los ajustes presupuestarios
+afectan la prestación de los servicios públicos. Por ello es necesario indigar
+más y preguntar.</p>
+     <div><small>Dic. 23, 2021</small></div>
+    </div>
+
+    <div class="footer grid">
+         <div class="four columns"><img src="/res/imgs/logo-second.png" width="100%"></div>
+         <div class="four columns">
+            <p>
+              El Centro de Monitoreo e Incidencia Fiscal es una iniciativa de
+              la Fundación Nacional para el Desarrollo, capítulo nacional de
+              Transparencia Internacional.
+            </p>
+            <p>
+               Calle Arturo Ambrogi No. 411, San Salvador<br/>
+               Tel. +503 2209-4300</br>
+               Correo: <a href="mailto:cemif@funde.org">cemif@funde.org</a>
+            </p>
+         </div>
+         <div class="four columns">
+             <ul>
+                 <li><a href="/info/">Acerca de</a></li>
+                 <!--<li><a href="/info/equipo.html">Equipo</li>-->
+                 <li>
+                   <a href="/info/privacidad.html">Política de privacidad</a>
+                 </li>
+                 <li>
+                    <a href="/info/licencia.html">Licencia y derechos de
+                    autor</a>
+                 </li>
+                 <li>
+                     <a href="http://fiscal.funde.org:8080">
+                         Sitio anterior
+                     </a>
+                 </li>
+             </ul>
+        </div>
+    </div>
+</body>
+</html>
